@@ -1,9 +1,17 @@
 import './App.css';
 import React,  {useState} from 'react';
 import SearchBar from './components/SearchBar.jsx';
-import Card from './components/Card.jsx';
+import CardComponent from './components/CardComponent.jsx';
 import { IoPersonCircleOutline} from "react-icons/io5";
 import { PiShoppingCart } from "react-icons/pi";
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const DynamicButton = ({ id, value, isActive, onClick }) => {
 
@@ -48,52 +56,25 @@ function App() {
         <DynamicButton key={index} id={`button-${index}`} value={sort} isActive={activeButton === index} onClick={() => handleButtonClick(index)}/>
       ))}
       </div>
-      <div id='products'> 
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-        <Card name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
+      <div className="products">
+        <Carousel 
+          opts={{
+            align: "start",
+          }}
+          className="w-[90%] pro-carousel"
+        >
+          <CarouselContent className="-ml-4">
+            {Array.from({ length: 10 }).map((_, index) => (
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-10/10">
+                <CardComponent name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
-      <div class="flex items-center w-full mx-auto justify-center">
-        <button
-            class="group rounded-l-full px-6 py-[18px] border border-gray-200 flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:shadow-gray-200 hover:border-gray-300 hover:bg-gray-50">
-            <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
-                fill="none">
-                <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                    stroke-linecap="round" />
-                <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                    stroke-linecap="round" />
-            </svg>
-        </button>
-        <input type="text"
-            class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
-            placeholder="1"/>
-        <button
-            class="group rounded-r-full px-6 py-[18px] border border-gray-200 flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:shadow-gray-200 hover:border-gray-300 hover:bg-gray-50">
-            <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
-                fill="none">
-                <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6"
-                    stroke-linecap="round" />
-                <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                    stroke-linecap="round" />
-                <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                    stroke-linecap="round" />
-            </svg>
-        </button>
-    </div>
+
     </div>
   );
 }
