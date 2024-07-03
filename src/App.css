@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.App-header {
+  background-color: #fafcfe;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.logoText {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vh;
+  color: black;
+}
+
+#nav-logo {
+  height: 5vh;
+}
+
+.nav-logos {
+  fill: #ff3b3f;
+  transition: all 0.3s ease 0s;
+  height: 30px;
+  width: 30px;
+}
+
+.header-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-div {
+  gap: 0.5vw;
+  margin-right: 18vw;
+}
+
+.functional-div {
+  gap: 3vw;
+}
+
+.nav-logos:hover {
+  fill: unset;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.Kategorien {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+  align-content: center;
+  background-color: #efefef;
+  gap: 2vw;
+  padding: 0 2vw;
+  text-align: center;
+}
+
+.button-solid {
+  border: none;
+  outline: none;
+  background-color: #efefef;
+  width: 100%;
+  color: #000000;
+  font-size: medium;
+  padding: 1.5vh 0;
+  transition: all 0.3s ease 0s;
+}
+
+.button-solid:hover {
+  background-color: #ff3b3f;
+}
+
+.new-background {
+  background-color: #caebf2;
+}
+
+
+#products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0;
+}
