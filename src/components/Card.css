@@ -3,7 +3,7 @@
 .card {
     width: 250px;
     height: 370px;
-    background-color: #efefef;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
     overflow: hidden;
@@ -20,7 +20,7 @@
     display:flex;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: #efefef;
     height: 100px;
     justify-content: center;
     margin: 15px 10px;
@@ -76,18 +76,25 @@
 
 
 
-#info-button {
+#info-add-button {
     margin-top: 20px;
     background-color: #caebf2;
     text-align: center;
     border-radius: 10px;
-    width: 100%;
+    width: 40%;
     color: #111111;
     transition: all 0.3s ease 0s;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
-#info-button:hover {
+#info-add-button:hover {
     background-color: #ff3b3f;
+}
+
+#info-cart-section {
+    display: flex;
 }
