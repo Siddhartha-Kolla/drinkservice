@@ -1,10 +1,7 @@
 import './App.css';
 import React,  {useState} from 'react';
-import SearchBar from './components/SearchBar.jsx';
+import HeaderComponent from './components/HeaderComponent.jsx';
 import CardComponent from './components/CardComponent.jsx';
-import { IoPersonCircleOutline} from "react-icons/io5";
-import { PiShoppingCart } from "react-icons/pi";
-import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -37,19 +34,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <a href='#'>
-        <div className='logo-div header-div'>
-          <img src={'/img/logo.svg'
-          } id="nav-logo"/>
-        </div></a>
-        <div className='functional-div header-div'>
-          <SearchBar/>
-          <a href='#'><IoPersonCircleOutline className='nav-logos' /></a>
-          <a href='#'><PiShoppingCart className='nav-logos'/></a>
-          
-        </div>
-      </header>
+      <HeaderComponent/>    
       <div className='Kategorien'>
       {sorts.map((sort, index) => (
         <DynamicButton key={index} id={`button-${index}`} value={sort} isActive={activeButton === index} onClick={() => handleButtonClick(index)}/>
