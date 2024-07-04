@@ -40,9 +40,8 @@ function App() {
       <header className="App-header">
         <a href='#'>
         <div className='logo-div header-div'>
-          <img src={'/img/logo.png'
+          <img src={'/img/logo.svg'
           } id="nav-logo"/>
-          <span class="logoText">Getränkeservice</span>
         </div></a>
         <div className='functional-div header-div'>
           <SearchBar/>
@@ -56,25 +55,26 @@ function App() {
         <DynamicButton key={index} id={`button-${index}`} value={sort} isActive={activeButton === index} onClick={() => handleButtonClick(index)}/>
       ))}
       </div>
-      <div className="products">
-        <Carousel 
-          opts={{
-            align: "start",
-          }}
-          className="w-[90%] pro-carousel"
-        >
-          <CarouselContent className="-ml-4">
-            {Array.from({ length: 10 }).map((_, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-10/10">
-                <CardComponent name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"}/>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+      <div id='body' className='body'>
+        <div className="relative products">
+          <Carousel 
+            opts={{
+              align: "start",
+            }}
+            className="w-[90%] pro-carousel"
+          >
+            <CarouselContent className="flex justify-evenly">
+              {Array.from({ length: 15 }).map((_, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-[20%]" style= {{padding:'30px'}}>
+                  <CardComponent name={"HohesC Multivitaminsaft C&D"} volume={6} ppl={3.42} img_path={"coca.png"} className="test"/>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
       </div>
-
     </div>
   );
 }
