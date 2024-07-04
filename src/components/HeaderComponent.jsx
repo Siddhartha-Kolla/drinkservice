@@ -14,7 +14,7 @@ function HeaderComponent() {
       </div></a>
       <div className='functional-div header-div'>
         <SearchBar/>
-        <a href='#'><IoPersonCircleOutline className='nav-logos' /></a>
+        <a href='profile'><IoPersonCircleOutline className='nav-logos' /></a>
         <a href='#'><PiShoppingCart className='nav-logos'/></a>
       </div>
     </div>

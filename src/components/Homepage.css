@@ -1,0 +1,19 @@
+#products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0;
+}
+.products {
+  display: flex;
+  align-items: center;
+  /* background-color: green; */
+  justify-content: center;
+  width: 75%;
+}
+
+.pro-carousel {
+  width: 300px;
+  /* background-color: blue; */
+}

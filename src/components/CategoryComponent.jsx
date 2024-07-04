@@ -1,16 +1,7 @@
-import './App.css';
+import './CategoryComponent.css';
 import React,  {useState} from 'react';
-import HeaderComponent from './components/HeaderComponent.jsx';
-import Homepage from './components/Homepage.jsx';
-import CardComponent from './components/CardComponent.jsx';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-import LoginComponent from './components/LoginComponent.jsx'
+
+
 
 const DynamicButton = ({ id, value, isActive, onClick }) => {
 
@@ -26,7 +17,7 @@ const DynamicButton = ({ id, value, isActive, onClick }) => {
   );
 };
 
-function App() {
+function CategoryComponent() {
 
   const sorts = ["Wasser","Saft","Softdrinks","warme Getränke","Bier","Wein"]
   const [activeButton, setActiveButton] = useState(null);
@@ -35,13 +26,12 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <HeaderComponent/>
-      <div id='body' className='body'>
-        <Homepage/>
-      </div>
+    <div className='Kategorien'>
+    {sorts.map((sort, index) => (
+      <DynamicButton key={index} id={`button-${index}`} value={sort} isActive={activeButton === index} onClick={() => handleButtonClick(index)}/>
+    ))}
     </div>
   );
 }
 
-export default App;
+export default CategoryComponent;

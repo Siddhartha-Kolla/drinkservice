@@ -1,0 +1,30 @@
+.Kategorien {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-content: center;
+    background-color: #ffffff;
+    gap: 2vw;
+    padding: 0 2vw;
+    text-align: center;
+  }
+  
+  .button-solid {
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    width: 100%;
+    color: #000000;
+    font-size: medium;
+    padding: 1.5vh 0;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .button-solid:hover {
+    background-color: #ff3b3f;
+  }
+  
+  .new-background {
+    background-color: #caebf2;
+  }
