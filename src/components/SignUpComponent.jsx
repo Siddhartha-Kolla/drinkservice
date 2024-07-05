@@ -14,7 +14,7 @@ function SignUpComponent () {
     return (
       <div className="w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px]">
       <div className="signupcenter">
-        <Card className="mx-auto max-w-sm heightadjust">
+        <Card className="mx-auto max-w-sm heightadjust border-none shadow-none">
           <CardHeader>
             <CardTitle className="text-xl">Registrieren</CardTitle>
             <CardDescription>
@@ -48,9 +48,6 @@ function SignUpComponent () {
               </div>
               <Button type="submit" className="w-full">
                 Create an account
-              </Button>
-              <Button variant="outline" className="w-full">
-                Sign up with GitHub
               </Button>
             </div>
             <div className="mt-4 text-center text-sm">
