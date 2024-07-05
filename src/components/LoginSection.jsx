@@ -15,7 +15,7 @@ const LoginSection = () => {
         </div>
         <div className="grid gap-4">
           <div className="grid gap-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">E-Mail</Label>
             <Input
               id="email"
               type="email"

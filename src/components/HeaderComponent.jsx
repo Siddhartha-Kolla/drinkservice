@@ -3,6 +3,15 @@ import React,  {useState} from 'react';
 import SearchBar from './SearchBar.jsx';
 import { IoPersonCircleOutline} from "react-icons/io5";
 import { PiShoppingCart } from "react-icons/pi";
+import LoginSection from './LoginSection.jsx';
+
+openNewpage1(); {
+  window.open(url,);
+}
+
+openNewpage2(); {
+  window.open(url,)
+}
 
 function HeaderComponent() {
   return (
@@ -14,8 +23,8 @@ function HeaderComponent() {
       </div></a>
       <div className='functional-div header-div'>
         <SearchBar/>
-        <a href='profile'><IoPersonCircleOutline className='nav-logos' /></a>
-        <a href='#'><PiShoppingCart className='nav-logos'/></a>
+        <button id="openNewpage1"><a href='profile'><IoPersonCircleOutline className='nav-logos'/></a></button>
+        <button id="openNewpage2"><a href='shoppingcart'><PiShoppingCart className='nav-logos'/></a></button>
       </div>
     </div>
   );

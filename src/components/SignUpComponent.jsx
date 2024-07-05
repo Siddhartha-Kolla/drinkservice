@@ -33,29 +33,26 @@ function SignUpComponent () {
               </div>
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">E-Mail</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="m@example.com"
+                placeholder="maxmustermann@beispiel.com"
                 required
               />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">Passwort</Label>
               <Input id="password" type="password" />
             </div>
             <Button type="submit" className="w-full">
-              Create an account
-            </Button>
-            <Button variant="outline" className="w-full">
-              Sign up with GitHub
+              Registrieren
             </Button>
           </div>
           <div className="mt-4 text-center text-sm">
-            Already have an account?{" "}
+            Schon ein Konto?{" "}
             <a href="#" className="underline">
-              Sign in
+              Anmelden
             </a>
           </div>
         </CardContent>
