@@ -26,10 +26,12 @@ function CategoryComponent() {
   };
 
   return (
-    <div className='Kategorien'>
-    {sorts.map((sort, index) => (
-      <DynamicButton key={index} id={`button-${index}`} value={sort} isActive={activeButton === index} onClick={() => handleButtonClick(index)}/>
-    ))}
+    <div className=' flex justify-center'>
+      <div className='w-3/4 Kategorien'>
+        {sorts.map((sort, index) => (
+          <DynamicButton key={index} id={`button-${index}`} value={sort} isActive={activeButton === index} onClick={() => handleButtonClick(index)}/>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,19 +1,29 @@
-#products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin: 0;
-}
+@import url(https://fonts.googleapis.com/css?family=Lato);
 .products {
   display: flex;
   align-items: center;
-  /* background-color: green; */
   justify-content: center;
-  width: 75%;
+  width: 100%;
 }
 
 .pro-carousel {
   width: 300px;
-  /* background-color: blue; */
+  background-color: blue;
+}
+
+.homepage-body {
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 75%;
+}
+
+.carousel-headings {
+  font-weight: bold;
+  font-family: 'Lato';
+  font-size: 20px;
+  padding-left: 25px;
 }
